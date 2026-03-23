@@ -33,14 +33,6 @@ Generate multiple random numbers
 Input validation (min/max & digit count)
 Repeat generation without restarting
 Runs in Bash (no heavy dependencies)
-Project Structure
-Password-Generator/
-│
-├── password-generator.sh
-├── lib/
-│   └── tools.sh
-├── README.md
-└── LICENSE
 
 No unnecessary files included (clean repo structure)
 
