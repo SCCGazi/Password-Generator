@@ -1,81 +1,96 @@
-# script-template
-A repo on which to build scripting projects
+Password Generator (Bash)
 
-Linux Mastery: Scripting & Automation Template
+A lightweight, interactive Bash script that generates random numbers with a fixed digit length—designed for simple password/PIN creation and input validation practice.
 
-North Seattle College | IT135 Intro to Linux
-Overview
+About Me
 
-This repository is a professional-grade development environment for Linux Bash scripting. It is designed to transition students from basic command execution to building modular, documented, and industrial-strength tools.
+Hi, I’m Gazi Kutbay
+I’m building hands-on experience with Linux, Bash scripting, and automation. This project demonstrates my ability to:
 
-[Script Template Repo Overview](https://tinyurl.com/script-template-repo-overview)
+Write structured Bash scripts
+Validate user input
+Use loops, arrays, and conditions
+Build interactive CLI tools
+Case Study (Problem & Solution)
+Problem
 
-This environment is specifically tuned for the LAMP, Docker, and Docker Compose lab sequences, providing a robust library (/lib) and a standardized execution path (/bin).
-Getting Started with GitHub Codespaces
+Users often need quick, structured random numbers (e.g., PIN codes, test data, temporary passwords). However:
 
-    Click the "Code" button in this repository.
+Manual generation is inefficient
+Incorrect formats (wrong digit length) cause issues
+Many tools lack input validation
+Solution
 
-    Select the "Codespaces" tab and click "Create codespace on main."
+This script solves the problem by:
 
-    Once the environment loads, wait for the terminal to appear.
+Enforcing exact digit length
+Allowing custom min/max ranges
+Generating multiple random values instantly
+Providing a user-friendly interactive experience
+Features
+Fixed digit-length validation
+Generate multiple random numbers
+Input validation (min/max & digit count)
+Repeat generation without restarting
+Runs in Bash (no heavy dependencies)
+Project Structure
+Password-Generator/
+│
+├── password-generator.sh
+├── lib/
+│   └── tools.sh
+├── README.md
+└── LICENSE
 
-    The system will automatically run install-tools.sh and setup-env.sh to configure your workspace.
+No unnecessary files included (clean repo structure)
 
-    To finalize the setup in your current terminal, run:
-    . ./bin/repo.sh
+How to Run (GitHub Codespaces)
 
-Core Tools
+This project is fully compatible with GitHub Codespaces.
 
-This repo includes specialized tools to verify your environment and demonstrate advanced scripting techniques:
-1. The Environment Doctor (check-env.sh)
+Steps:
+Open the repository on GitHub
+Click Code → Codespaces → Create Codespace
+Wait for the environment to load
+In the terminal, run:
+chmod +x password-generator.sh
+./password-generator.sh
+Follow the prompts
 
-If your commands aren't working or your paths feel "broken," run the diagnostic tool:
-Command: check-env.sh
-Purpose: Verifies REPO_ROOT, PATH settings, global symlinks, and software dependencies like 'bc'.
-2. The Starfleet Navigator (example.sh)
+The script runs without errors in Codespaces
 
-A demonstration of "Pro-level" scripting.
-Command: ./bin/example.sh
-Features:
+Local Usage
+chmod +x password-generator.sh
+./password-generator.sh
+Example
+Enter amount of digits: 4
+How many random numbers to generate: 3
+Min: 1000
+Max: 9999
 
-    Floating point math using 'bc'.
-
-    Precise arrival date calculation using Unix Epoch seconds (avoiding the "same day/month" calendar trap).
-
-    Professional flag parsing (-h for help, -d for debug mode).
-
-    Input validation via the shared /lib/tools.sh library.
-
-Features & Standards
-
-    Modular Library: /lib/tools.sh provides validated input functions (getInteger, getNumber) and debugging suites.
-
-    Debug Architecture: Integrated -d flags and DEBUG=1 environmental overrides for real-time code tracing.
-
-    Standardized Documentation: All scripts follow the Google Shell Style Guide for headers and function commentary.
-
-    Portability: The environment tethering in ~/.bashrc uses guard clauses, allowing this folder to be moved to local WSL or Linux machines without breaking the system shell.
-
-License & Ethics
+Generated numbers:
+1. 4821
+2. 7365
+3. 1094
+Requirements
+Bash shell
+tools.sh file in lib/ directory (contains getNumber function)
 License
 
-This project is licensed under the Apache License 2.0. This allows for free use and modification in educational and professional contexts while maintaining authorship and providing no warranty.
-AI Collaboration Statement
+This project is licensed under the MIT License.
+See the LICENSE file for details.
 
-This repository template was developed through a collaborative partnership between Professor Bill Newman and Gemini (Google AI).
+Attribution
 
-    Role of Human: Architectural design, pedagogical strategy, logic verification, and educational context.
+This project was developed with support from:
 
-    Role of AI: Syntax optimization, documentation standardization, and regex refinement.
+ChatGPT (for guidance, debugging, and documentation)
+Classroom/lab materials and scripting exercises
+Summary
 
-    Purpose: To demonstrate the industry standard of "AI-Augmented Engineering," where AI acts as a high-velocity pair-programmer to ensure code quality and adherence to global standards.
+This project demonstrates:
 
-Authorship
-
-    Lead Instructor: Bill Newman
-
-    Contributors: Gemini (AI Assistant)
-
-    Version: 1.2.1
-
-    Updated: March 12, 2026
+Clean repository structure
+Functional Bash scripting
+Real-world input validation
+Professional documentation
