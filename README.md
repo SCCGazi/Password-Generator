@@ -64,6 +64,7 @@ Generated numbers:
 1. 4821
 2. 7365
 3. 1094
+   
 Requirements
 Bash shell
 tools.sh file in lib/ directory (contains getNumber function)
