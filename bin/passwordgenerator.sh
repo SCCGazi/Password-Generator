@@ -13,26 +13,41 @@ while true; do
     while [ "$VALID" = false ]; do
         min=$(getNumber "Min: ")
         max=$(getNumber "Max: ")
-
+        result=$((max - min))
         count_min=${#min}
         count_max=${#max}
-
+        echo "result is $result"
         if [[ $count_min -ne $digits ]]; then
             echo "ERROR: $min must be exactly $digits digits" >&2
         elif [[ $count_max -ne $digits ]]; then
             echo "ERROR: $max must be exactly $digits digits" >&2
         elif [[ $min -gt $max ]]; then
             echo "ERROR: Min must be less than or equal to Max" >&2
+        elif [[ $random -ge $result ]]; then
+            echo "ERROR: The number of randomly selected digits is greater than the difference between the maximum and minimum digits." >&2
         else
             VALID=true
         fi
     done
 
     # Generate random numbers
-    numbers=()    
+    numbers=()
     for ((i=1; i<=random; i++)); do
-        rand=$(( RANDOM % (max - min + 1) + min ))
-        numbers+=($rand)
+        while :; do
+            rand=$(( RANDOM % (max - min + 1) + min ))
+            found=false
+            for n in "${numbers[@]}"; do
+                if [[ "$n" -eq "$rand" ]]; then
+                    found=true
+                    break
+                fi
+            done
+
+            if [[ "$found" = false ]]; then
+                numbers+=("$rand")
+                break
+            fi
+        done
     done
 
     # List the numbers
