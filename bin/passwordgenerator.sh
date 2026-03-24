@@ -16,7 +16,6 @@ while true; do
         result=$((max - min))
         count_min=${#min}
         count_max=${#max}
-        echo "result is $result"
         if [[ $count_min -ne $digits ]]; then
             echo "ERROR: $min must be exactly $digits digits" >&2
         elif [[ $count_max -ne $digits ]]; then
