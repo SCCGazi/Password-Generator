@@ -121,7 +121,7 @@ Generated numbers:
 3. 10001
 4. 10006
 5. 10005
-6. 
+   
 Do you want to generate another set? (y/n): y
 -----------------------------------------------------------------
 Do you want to generate random passwords with characters?
@@ -140,6 +140,7 @@ Generated passwords:
 3. 1&v]F
 4. Q0=x
 5. Sdd6W.w
+   
 Do you want to generate another set? (y/n): n
 
 Goodbye!
