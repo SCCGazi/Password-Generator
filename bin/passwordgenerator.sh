@@ -23,7 +23,7 @@ while true; do
         elif [[ $min -gt $max ]]; then
             echo "ERROR: Min must be less than or equal to Max" >&2
         elif [[ $random -ge $result ]]; then
-            echo "ERROR: The number of randomly selected digits is greater than the difference between the maximum and minimum digits." >&2
+            echo "ERROR: The number of randomly selected numbers is greater than the difference between the maximum and minimum numbers." >&2
         else
             VALID=true
         fi
