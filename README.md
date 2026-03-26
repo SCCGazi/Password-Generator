@@ -1,89 +1,130 @@
-Password Generator (Bash)
+Password Generator Script
 
-A lightweight, interactive Bash script that generates random numbers with a fixed digit length—designed for simple password/PIN creation and input validation practice.
+Author
 
-About Me
+Gazi Kutbay
 
-Hi, I’m Gazi Kutbay
-I’m building hands-on experience with Linux, Bash scripting, and automation. This project demonstrates my ability to:
+Course
 
-Write structured Bash scripts
-Validate user input
-Use loops, arrays, and conditions
-Build interactive CLI tools
-Case Study (Problem & Solution)
-Problem
+Application Development – North Seattle College
 
-Users often need quick, structured random numbers (e.g., PIN codes, test data, temporary passwords). However:
+Project Overview
 
-Manual generation is inefficient
-Incorrect formats (wrong digit length) cause issues
-Many tools lack input validation
-Solution
+This project is a custom-built password and number generator designed to help users create secure, randomized outputs based on their preferences. It provides two main functionalities:
 
-This script solves the problem by:
+* Generate strong, randomized passwords using mixed character sets
+* Generate unique random numbers within a defined range
 
-Enforcing exact digit length
-Allowing custom min/max ranges
-Generating multiple random values instantly
-Providing a user-friendly interactive experience
+The script focuses on user input validation, randomness, and flexibility, making it a practical tool for learning scripting concepts and improving security awareness.
+
 Features
-Fixed digit-length validation
-Generate multiple random numbers
-Input validation (min/max & digit count)
-Repeat generation without restarting
-Runs in Bash (no heavy dependencies)
+Password Generator (Character-Based)
 
-No unnecessary files included (clean repo structure)
+* Generates one or multiple passwords
+* Allows user-defined minimum and maximum length
+* Includes:
 
-How to Run (GitHub Codespaces)
+  * Lowercase letters
+  * Uppercase letters
+  * Digits
+  * Special characters
+* Ensures each password contains a mix of all character types
+* Randomizes character order for stronger security
 
-This project is fully compatible with GitHub Codespaces.
+Random Number Generator
 
-Steps:
-Open the repository on GitHub
-Click Code → Codespaces → Create Codespace
-Wait for the environment to load
-In the terminal, run:
-chmod +x password-generator.sh
-./password-generator.sh
-Follow the prompts
+* Generates multiple unique random numbers
+* Allows control over:
 
-The script runs without errors in Codespaces
+  * Number of digits
+  * Minimum and maximum values
+* Prevents duplicate numbers
+* Validates all user inputs for correctness
 
-Local Usage
-chmod +x password-generator.sh
-./password-generator.sh
-Example
-Enter amount of digits: 4
-How many random numbers to generate: 3
-Min: 1000
-Max: 9999
+Interactive Experience
 
-Generated numbers:
-1. 4821
-2. 7365
-3. 1094
-   
-Requirements
-Bash shell
-tools.sh file in lib/ directory (contains getNumber function)
+* Menu-driven interface
+* Clear prompts for user input
+* Input validation with error messages
+* Option to generate multiple sets without restarting
+
+User Manual
+
+This section explains how to use the application step by step.
+
+Starting the Program
+
+* Launch the script in a Linux environment
+* The program will display a menu asking what type of generation you want
+
+Option 1: Character-Based Password Generation
+
+1. When prompted, press **y** to select password generation
+2. Enter how many passwords you want to generate
+3. Enter the minimum password length
+4. Enter the maximum password length
+5. The program will validate your inputs:
+
+   * Minimum length must be less than or equal to maximum length
+6. The system will generate passwords that:
+
+   * Include letters, numbers, and special characters
+   * Are randomized for security
+7. Generated passwords will be displayed as a numbered list
+
+Option 2: Random Number Generation
+
+1. When prompted, press **n** to select number generation
+2. Enter the number of digits each number should have
+3. Enter how many random numbers to generate
+4. Enter the minimum value
+5. Enter the maximum value
+6. The program will validate:
+
+   * Minimum and maximum must have the specified number of digits
+   * Minimum must be less than maximum
+   * The number of requested values must not exceed the available range
+7. The system will generate unique random numbers
+8. Results will be displayed as a numbered list
+
+Generate Again or Exit
+
+* After results are displayed, the program will ask:
+
+  * Press **y** to generate another set
+  * Press **n** to exit the program
+
+Error Handling
+
+* If invalid input is entered, the program will display an error message
+* You will be prompted again until valid input is provided
+
+Project Structure
+
+* Main script file
+* External utility functions for input validation
+* Organized logic using reusable functions
+
+Skills Demonstrated
+
+* Bash scripting fundamentals
+* Function creation and reuse
+* User input handling and validation
+* Loop structures and conditional logic
+* Randomization techniques
+* Array usage and data handling
+
+Purpose
+
+This project was developed as part of coursework at North Seattle College to demonstrate practical scripting skills and problem-solving using automation. It highlights how command-line tools can be used to build useful and interactive utilities.
+
+Future Improvements
+
+* Add option to save generated results to a file
+* Enhance password strength rules with custom requirements
+* Improve user interface with more structured menus
+* Add logging for generated outputs
+
 License
 
-This project is licensed under the MIT License.
-See the LICENSE file for details.
-
-Attribution
-
-This project was developed with support from:
-
-ChatGPT (for guidance, debugging, and documentation)
-Classroom/lab materials and scripting exercises
-Summary
-
-This project demonstrates:
-
-Clean repository structure
-Functional Bash scripting
-Real-world input validation
-Professional documentation
+This project is for educational purposes.
