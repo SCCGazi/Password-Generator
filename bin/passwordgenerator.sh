@@ -26,8 +26,7 @@ ALL="$LOWER$UPPER$DIGITS$SPECIAL"
         fi
 
     done
-
-#STOP HERE FOR ...
+    
      # Generate passwords
     for ((i=1; i<=num_passwords; i++)); do
         length=$(( RANDOM % (max_len - min_len + 1) + min_len ))
