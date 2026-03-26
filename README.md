@@ -127,7 +127,7 @@ Do you want to generate another set? (y/n): y
 Do you want to generate random passwords with characters?
 Press y for yeas and n for no  (y/n):
 -----------------------------------------------------------------
-y
+
 How many passwords to generate?  5
 
 Minimum password length:  2
