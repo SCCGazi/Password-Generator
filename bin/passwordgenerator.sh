@@ -128,8 +128,6 @@ ALL="$LOWER$UPPER$DIGITS$SPECIAL"
         fi
     done
     }
-
-while true; do
  
       # Ask user if they want to generate again
     while true; do
@@ -149,4 +147,4 @@ while true; do
         fi
     done
 
-done
+
