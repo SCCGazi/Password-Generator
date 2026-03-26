@@ -1,5 +1,5 @@
 #!/bin/bash
-source tools.sh
+source /workspaces/Password-Generator/lib/tools.sh
 echo "------------------------PASSWORD GENERATOR-------------------"
 echo "----------------The app generates random passwords-----------"
 
