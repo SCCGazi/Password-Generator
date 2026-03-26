@@ -109,14 +109,19 @@ Project Structure
 Example Of Usage The App
 
 How many random numbers to generate:  5
+
 Min:  10000
+
 Max:  10006
+
 Generated numbers:
+
 1. 10002
 2. 10000
 3. 10001
 4. 10006
 5. 10005
+6. 
 Do you want to generate another set? (y/n): y
 -----------------------------------------------------------------
 Do you want to generate random passwords with characters?
@@ -124,8 +129,11 @@ Press y for yeas and n for no  (y/n):
 -----------------------------------------------------------------
 y
 How many passwords to generate?  5
+
 Minimum password length:  2
+
 Maximum password length:  7
+
 Generated passwords:
 1. 8=rK
 2. DW{9-j
@@ -133,6 +141,7 @@ Generated passwords:
 4. Q0=x
 5. Sdd6W.w
 Do you want to generate another set? (y/n): n
+
 Goodbye!
   
 Skills Demonstrated
