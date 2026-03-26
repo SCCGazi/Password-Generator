@@ -21,7 +21,9 @@ while true; do
         elif [[ $count_max -ne $digits ]]; then
             echo "ERROR: $max must be exactly $digits digits" >&2
         elif [[ $min -gt $max ]]; then
-            echo "ERROR: Min must be less than or equal to Max" >&2
+            echo "ERROR: Min must be less than Max" >&2
+        elif [[ $min -eq $max ]]; then
+            echo "ERROR: Min equal to Max" >&2
         elif [[ $random -ge $result ]]; then
             echo "ERROR: The number of randomly selected numbers is greater than the difference between the maximum and minimum numbers." >&2
         else
